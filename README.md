@@ -1,5 +1,5 @@
 ## Summary
-This project was done following the [official React tic-tac-toe tutorial](https://reactjs.org/tutorial/tutorial.html#function-components). All the optional feature recommendations (see below) in the tutorial have been implemented.
+This project was done following the [official React tic-tac-toe tutorial](https://reactjs.org/tutorial/tutorial.html). All the optional feature recommendations (see below) in the tutorial have been implemented.
 
 Optional feature recommendations implemented:
 * Display the location for each move in the format (col, row) in the move history list.
