@@ -17,7 +17,6 @@ class Board extends React.Component {
   renderSquare(i) {
     var highlight = false;
     if (this.props.winner) {
-      console.log(this.props.winner.includes(i));
       if (this.props.winner.includes(i)) {
         highlight = true;
       }
@@ -33,7 +32,8 @@ class Board extends React.Component {
   render() {
     return (
       <div>
-        {
+        { 
+          // Generate the board
           [0,1,2].map((row, i) => (
             <div key={i} className="board-row">
               {
@@ -55,7 +55,7 @@ class Game extends React.Component {
     this.state = {
       history: [{
         squares: Array(9).fill(null),
-        position: null,
+        position: null, // The index of the cell that a piece was put in
       }],
       moveSort: 'ASC',
       stepNumber: 0,
@@ -104,6 +104,7 @@ class Game extends React.Component {
     let moves = history.map((step, move) => {
       const col = step.position % 3;
       const row = Math.floor(step.position / 3);
+      // Currently selected point in history
       const className = (step.position === current.position) ?
         'selected' : ''; 
       const desc = move ?
